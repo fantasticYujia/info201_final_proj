@@ -1,7 +1,7 @@
 library(dplyr)
 library(shiny)
 library(DT)
-setwd("~/Documents/UW Related/info201/info201_final_proj/")
+##setwd("~/Documents/UW Related/info201/info201_final_proj/")
 
 player_stats <- read.csv(
   "data/lakers_stats_15-19.csv", header=TRUE, stringsAsFactors=FALSE
