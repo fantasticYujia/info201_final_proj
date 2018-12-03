@@ -2,10 +2,10 @@ library(shiny)
 library(dplyr)
 library(ggplot2)
 library(DT)
-setwd("~/Desktop/Info201/info201_final_proj/")
+##setwd("~/Desktop/Info201/info201_final_proj/")
 
 stats <- read.csv(
-  file = "data/lakers_stats_15-19.csv", stringsAsFactors = FALSE
+  "data/lakers_stats_15-19.csv", stringsAsFactors = FALSE
 )
 as.data.frame(stats)
 
