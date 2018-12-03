@@ -5,7 +5,7 @@ library(DT)
 setwd("~/Desktop/Info201/info201_final_proj/")
 
 stats <- read.csv(
-  file = "lakers_stats_15-19.csv", stringsAsFactors = FALSE
+  file = "data/lakers_stats_15-19.csv", stringsAsFactors = FALSE
 )
 as.data.frame(stats)
 
