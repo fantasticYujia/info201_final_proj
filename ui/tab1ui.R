@@ -1,6 +1,5 @@
 library(shiny)
-shinyUI(fluidPage(
-    mainPanel(
-      textOutput("text")
-    )
-))
+tabPanel(
+  "Introduction",
+  textOutput("intro")
+)
