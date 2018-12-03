@@ -27,9 +27,9 @@ library(dplyr)
                "first. Then, you can filter out which season you want to ",
              "look at. Next, you can filter out what specific information ",
            "you want to look at, you can choose from five different kinds ",
-         "of information, which are score, injury, rebound, block and ",
-         "steal information. This will then create a line graph showing ",
-             "the data you filtered about that player. ",
+         "of information, which are point per game, assist, rebound, block, ", 
+          "personal foul and information. This will then create a line graph ",
+                    "showing the data you filtered about that player. ",
     
         "On the last tab, you will be asked to choose one player name and ",
           "the season he plays, and then you will be asked to choose ",
