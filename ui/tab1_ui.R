@@ -1,4 +1,4 @@
 tabPanel(
   "Introduction",
-  textOutput("intro")
+  uiOutput("intro")
 )
