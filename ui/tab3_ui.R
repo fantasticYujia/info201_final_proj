@@ -4,11 +4,15 @@ tabPanel(
   "Player Info",
   sidebarLayout(
     sidebarPanel(
-      uiOutput("name")
+      uiOutput("nameplayer")
     ),
     mainPanel(
       htmlOutput("pic"),
-      textOutput("text")
+      textOutput("sub"),
+      textOutput("text1"),
+      textOutput("text2"),
+      textOutput("text3")
+      
     )
   )
 )
