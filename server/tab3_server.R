@@ -6,13 +6,13 @@ player_info <- read.csv(
 )
 
 output$nameplayer <-renderUI({
-  selectInput("name1", label = "Name of the Player",
+  selectInput("name3", label = "Name of the Player",
               choices = player_info$Player, selected = 1
   )
 })
 
 select_player1 <- reactive({
-  df <- filter(player_info, Player == input$name1) %>% head(1L)
+  df <- filter(player_info, Player == input$name3) %>% head(1L)
 })
 
 output$pic <- renderText({
@@ -20,7 +20,7 @@ output$pic <- renderText({
 })
 
 output$text1 <- renderText({
-  paste0(input$name1," is the ", select_player1()$Pos, " position on the 
+  paste0(input$name3," is the ", select_player1()$Pos, " position on the 
          Lakers team with the number of ",select_player1()$No.,
          " on his uniform.")
          
@@ -43,6 +43,6 @@ output$text3 <-  renderText({
 
 
 output$sub <-renderText({
-  paste0(input$name1)
+  paste0(input$name3)
 })
 
