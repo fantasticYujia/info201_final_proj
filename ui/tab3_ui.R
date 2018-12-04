@@ -7,11 +7,12 @@ tabPanel(
       uiOutput("nameplayer")
     ),
     mainPanel(
-      htmlOutput("pic"),
+  
       textOutput("sub"),
       textOutput("text1"),
       textOutput("text2"),
-      textOutput("text3")
+      textOutput("text3"),
+      htmlOutput("pic")
       
     )
   )
