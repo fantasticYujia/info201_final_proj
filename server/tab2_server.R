@@ -51,16 +51,20 @@ output$picture <- renderText({
   c('<img src=', select_player()$Photo.Url, '>')
 })
 
+select_single_player <- reactive({
+  df3 <- filter(player_image, Player == input$name) %>% head(1L)
+})
+
 output$text1 <- renderText({
-  paste0(input$name," is the ", select_player()$Pos, " position on the 
-         Lakers team with the number of ",select_player()$No.,
+  paste0(input$name," is the ", select_single_player()$Pos, " position on the 
+         Lakers team with the number of ",select_single_player()$No.,
          " on his uniform.")
   
 })
 
 output$text2 <- renderText({
-  if(select_player()$College != ""){
-    paste0("He was from ", select_player()$College, ".")
+  if(select_single_player()$College != ""){
+    paste0("He was from ", select_single_player()$College, ".")
   }else{
     paste0("He joined into NBA directly after graduated from high school.")
   }
@@ -68,7 +72,7 @@ output$text2 <- renderText({
 
 output$text3 <-  renderText({
   paste0("He was born on ",
-         select_player()$Birth.Date,", and his height and weight are ", 
-         select_player()$Ht, "feet and ",
-         select_player()$Wt, " lbs.")
+         select_single_player()$Birth.Date,", and his height and weight are ", 
+         select_single_player()$Ht, "feet and ",
+         select_single_player()$Wt, " lbs.")
 })

@@ -7,7 +7,8 @@ stats <- read.csv(
   "data/lakers_stats_15-19.csv", stringsAsFactors = FALSE
 )
 as.data.frame(stats)
-
+ok <- stats[1,]
+lis <- unlist(c(ok))
 output$name1 <- renderUI({
   df1 <- filter(stats, Season == input$Season1)
   selectInput("name1", label = "Name of the first player",
@@ -32,5 +33,8 @@ second_player_season <- reactive({
 })
 
 output$mytable1 <- DT::renderDataTable({
-  df3 <- rbind(first_player_season(), second_player_season())
+  Player_1 <- unlist(c(first_player_season()))
+  Player_2 <- unlist(c(second_player_season()))
+  df3 <- data.frame(Player_1, Player_2)
+  df3 <- df3[-1, ]
 })
