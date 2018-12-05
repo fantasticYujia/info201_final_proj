@@ -46,8 +46,18 @@ tabPanel(
       ),
       conditionalPanel(
         condition = "input.choice == 'Single Player'",
-        htmlOutput("picture"),
         textOutput("player"),
+        tags$head(tags$style("#player{color: purple;
+                                 font-size: 20px;
+                                 font-style: italic;
+                                 font-weight: bold;
+                             }"
+                         )
+        ),
+        htmlOutput("picture"),
+        textOutput("text1"),
+        textOutput("text2"),
+        textOutput("text3"),
         DT::dataTableOutput("single")
       )
     )
