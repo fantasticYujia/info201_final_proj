@@ -2,7 +2,7 @@ library(shiny)
 library(ggplot2)
 
 tabPanel(
-  "Infomation Comparison",
+  "Information Comparison",
   sidebarLayout(
     sidebarPanel(
       
