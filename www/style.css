@@ -1,0 +1,9 @@
+.navbar { 
+  background-color:purple;
+  font-family: arial;
+  font-size: 15px;
+} 
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background-color:yellow;
+}
+
