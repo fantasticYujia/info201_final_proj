@@ -4,7 +4,7 @@ library(shinyWidgets)
 library(shinythemes)
 
 ui <- navbarPage(
-  theme = shinytheme("united"),
+  theme = "style.css",
   title = p(strong("LAKER STATISTICS")),
   source(file.path("ui", "tab1_ui.R"),  local = TRUE)$value,
   source(file.path("ui", "tab2_ui.R"),  local = TRUE)$value,
